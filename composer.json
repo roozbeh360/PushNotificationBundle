@@ -1,0 +1,27 @@
+{
+    "name": "Rth/notification-bundle",
+    "type": "symfony-bundle",
+    "description": "symfony push notification bundle for ios , android devices .",
+    "keywords": ["push", "notification", "bundle", "symfony2"],
+    "homepage": "https://github.com/roozbeh360/PushNotificationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roozbeh Baabakaan",
+            "email": "iman@i-gh.ir",
+            "homepage": "baabakaan@remake.ir",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": ">=2.3",
+        "sly/notification-pusher": "v2.2.11",
+        "symfony/options-resolver": "v2.7.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rth\\NotificationBundle": ""
+        }
+    },
+    "target-dir": "Rth/NotificationBundle"
+}

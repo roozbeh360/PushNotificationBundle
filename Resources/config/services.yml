@@ -1,0 +1,5 @@
+
+services:
+    r360_notification.service:
+        class: Rth\NotificationBundle\Services\NotificationService
+        arguments: [@doctrine.orm.entity_manager,%r360_notification.apns.pem%,%r360_notification.gcm.key%,%r360_notification.env%]
