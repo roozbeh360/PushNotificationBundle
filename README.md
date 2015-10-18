@@ -38,6 +38,7 @@ add device to database
         $notificaionManager->addDevice($os, $token);
 		
 send push notification		
+
 		$notificaionManager = $this->get('r360_notification.service');
         $notificaionManager->sendNotifications(Device_entity, 'i have send 1 push to device' );
 		
