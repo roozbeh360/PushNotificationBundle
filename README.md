@@ -5,7 +5,7 @@ https://github.com/Ph3nol/NotificationPusher
 
 ## installation
 
-	composer require rth/notification-bundle
+	composer require rth/notification-bundle "dev-master"
 
 in your AppKernel.php file add following line :
 
