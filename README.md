@@ -3,7 +3,7 @@ symfony push notification bundle for ios , android devices . based on Ph3nol/Not
 
 https://github.com/Ph3nol/NotificationPusher
 
-## install
+## installation
 
 	composer require rth/notification-bundle
 
@@ -28,9 +28,12 @@ now add these lines in app/config.yml
 		r360_notification.env: prod # environment depends on your key for pem file 
 		
 		
+update database schema 
+
+		doctrine:schema:update --force
 		
 		
-usage
+## How to use ?
 
 add device to database
 
