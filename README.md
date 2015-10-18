@@ -3,12 +3,11 @@ symfony push notification bundle for ios , android devices . based on Ph3nol/Not
 
 https://github.com/Ph3nol/NotificationPusher
 
-install
+## install
 
+	composer require rth/notification-bundle
 
-AppKernel.php
-
-add 
+in your AppKernel.php file add following line :
 
 	public function registerBundles()
 		{
@@ -21,7 +20,7 @@ add
 			)
 		}
 
-app/config.yml
+now add these lines in app/config.yml
 
 	parameters:    
 		r360_notification.apns.pem: "%kernel.root_dir%/config/apple.pem" # could be production or sandbox/dev 
