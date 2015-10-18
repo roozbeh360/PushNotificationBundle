@@ -1,5 +1,5 @@
 {
-    "name": "Rth/notification-bundle",
+    "name": "rth/notification-bundle",
     "type": "symfony-bundle",
     "description": "symfony push notification bundle for ios , android devices .",
     "keywords": ["push", "notification", "bundle", "symfony2"],

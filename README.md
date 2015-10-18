@@ -9,16 +9,17 @@ install
 AppKernel.php
 
 add 
-public function registerBundles()
-    {
-        $bundles = array(
-		.
-		.
-		.
-		.
-		new Rth\NotificationBundle\RthNotificationBundle(), // push notification bundle
-		)
-	}
+
+	public function registerBundles()
+		{
+			$bundles = array(
+			.
+			.
+			.
+			.
+			new Rth\NotificationBundle\RthNotificationBundle(), // push notification bundle
+			)
+		}
 
 app/config.yml
 
