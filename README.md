@@ -55,5 +55,9 @@ add device entity to any entities
 	$notificaionManager = $this->get('r360_notification.service');
     $notificaionManager->addDevice($os, $token, $entity );	
 
-more useage :
+## To Do 
+
+many many things .
+
+## more useage for now :
 		https://github.com/Ph3nol/NotificationPusher
