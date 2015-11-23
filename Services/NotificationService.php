@@ -19,6 +19,7 @@ class NotificationService
     private $pushManager;
     private $apnsAdapter;
     private $gcmAdapter;
+    private $env;
 
     function __construct(EntityManager $entityManager, $certificate_pem, $gcm_key, $env)
     {
@@ -32,6 +33,7 @@ class NotificationService
 
         $this->apnsAdapter = new ApnsAdapter(array('certificate' => $certificate_pem,));
         $this->gcmAdapter = new GcmAdapter(array('apiKey' => $gcm_key,));
+        $this->env = $env ;
     }
 
     public function addDevice($os, $token, $user = null)
@@ -83,8 +85,18 @@ class NotificationService
         $devices = new DeviceCollection($apnsDevices);
         $message = new Message($apnsMessage);
         $push = new Push($this->apnsAdapter, $devices, $message);
-        $this->pushManager->add($push);
-        $this->pushManager->push();
+
+        if ($this->env == 'prod') {
+            $pushManager = new PushManager(PushManager::ENVIRONMENT_PROD);
+        } else {
+            $pushManager = new PushManager(PushManager::ENVIRONMENT_DEV);
+        }
+        
+        $pushManager->add($push);
+        $pushManager->push();
+
+        //$this->pushManager->add($push);
+        //$this->pushManager->push();
     }
 
     private function sendGcmNotification($tokens, $gcmMessage)
