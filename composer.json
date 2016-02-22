@@ -15,7 +15,7 @@
     ],
     "require": {
         "symfony/framework-bundle": ">=2.3",
-        "sly/notification-pusher": "v2.2.12",
+        "sly/notification-pusher": "v2.2.*",
         "symfony/options-resolver": "v2.7.3"
     },
     "autoload": {
